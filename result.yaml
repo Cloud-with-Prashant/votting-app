@@ -3,8 +3,11 @@ kind: Pod
 metadata:
   name: result
   labels:
-    tier: frontend-2
+    app: votting-app
+    tier: result-front
 spec:
   containers:
-    - name: vote
-      image: kodekloud/result-app
+    - name: result
+      image: dockersamples/examplevotingapp_result
+      ports:
+        - containerPort: 80

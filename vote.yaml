@@ -3,8 +3,12 @@ kind: Pod
 metadata:
   name: vote
   labels:
-    tier: frontend
+    app: votting-app
+    tier: vote-front
 spec:
   containers:
     - name: vote
       image: kodekloud/voting-app
+      ports:
+        - containerPort: 80
+          
