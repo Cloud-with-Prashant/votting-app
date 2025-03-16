@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: result
+  labels:
+    tier: frontend-2
+spec:
+  containers:
+    - name: vote
+      image: kodekloud/result-app
